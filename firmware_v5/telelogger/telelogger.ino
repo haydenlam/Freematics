@@ -924,7 +924,7 @@ void telemetry(void* inst)
           connErrors = 0;
           if (teleClient.connect()) {
             state.set(STATE_WIFI_CONNECTED | STATE_NET_READY);
-            beep(50);
+            //beep(50);
             // switch off cellular module when wifi connected
             if (state.check(STATE_CELL_CONNECTED)) {
               teleClient.cell.end();
@@ -947,7 +947,7 @@ void telemetry(void* inst)
         }
         Serial.println("[CELL] In service");
         state.set(STATE_NET_READY);
-        beep(50);
+        //beep(50);
       }
 
       if (millis() - lastRssiTime > SIGNAL_CHECK_INTERVAL * 1000) {

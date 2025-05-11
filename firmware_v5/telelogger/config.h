@@ -91,7 +91,7 @@
 // cellular network settings
 #define CELL_APN ""
 // Freematics Hub server settings
-#define SERVER_HOST "hub.freematics.com"
+#define SERVER_HOST "home.hlam.org"
 #define SERVER_PROTOCOL PROTOCOL_UDP
 #endif
 
@@ -105,7 +105,7 @@
 #if !SERVER_PORT
 #undef SERVER_PORT
 #if SERVER_PROTOCOL == PROTOCOL_UDP
-#define SERVER_PORT 8081
+#define SERVER_PORT 5170
 #elif SERVER_PROTOCOL == PROTOCOL_HTTP
 #define SERVER_PORT 80
 #elif SERVER_PROTOCOL == PROTOCOL_HTTPS
@@ -140,7 +140,7 @@
 **************************************/
 #ifndef STORAGE
 // change the following line to change storage type
-#define STORAGE STORAGE_SD
+#define STORAGE STORAGE_SPIFFS
 #endif
 
 /**************************************
